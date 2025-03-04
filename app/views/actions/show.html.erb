@@ -1,0 +1,9 @@
+<h2><%= @action.title %></h2>
+<p><%= @action.text %></p>
+<%= link_to "editer", edit_action_path %>
+
+
+<%= link_to "Delete",
+  action_path(@action),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
